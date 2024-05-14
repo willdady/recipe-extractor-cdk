@@ -1,14 +1,20 @@
-# Welcome to your CDK TypeScript project
+# Recipe Extractor CDK
 
-This is a blank project for CDK development with TypeScript.
+A demo app which creates a serverless soluton for extracting a recipe from a webpage using Amazon Bedrock and Anthropic Claude 3.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+Please see the accompanying blog post https://willdady.com/getting-to-the-meat-and-potatoes-of-serverless-recipe-parsing-with-amazon-bedrock
 
-## Useful commands
+## Setup
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+This repository assumes you are running Node.js v20.
+If you are an [nvm](https://github.com/nvm-sh/nvm) user, simply run `nvm use` in the repository root to activate the correct version of Node.js.
+
+```bash
+npm install
+```
+
+## Deploy
+
+```bash
+npm run cdk -- --profile your-aws-profile deploy RecipeExtractorCdkStack
+```
